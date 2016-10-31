@@ -5,19 +5,23 @@
 ** Login   <nathan.tual@epitech.eu>
 ** 
 ** Started on  Mon Oct 31 22:43:12 2016 Nathan
-** Last update Mon Oct 31 22:54:26 2016 Nathan
+** Last update Mon Oct 31 23:24:24 2016 Nathan
 */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include "include/my.h"
 
 int	main()
 {
   int	nb_room;
+  int	**map;
 
+  nb_room = 0;
   srand(time(NULL));
-  nb_room = rand() % 13;
-  printf("%d\n", nb_room);
+  while (nb_room < 5)
+    nb_room = rand() % 15;
+  gen_map(nb_room);
   return (0);
 }
